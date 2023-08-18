@@ -1,0 +1,17 @@
+const String homeAppBarTitle = "Hello John";
+const String loginAppBarTitle = "SIGN IN";
+const String passwordTitle = "Forgot Password";
+const String profileAppBarTitle = "My Account";
+const String loginButtonTitle = "Sign in";
+const String loginImageTitle = "Voyage";
+const String homeTextFieldHintText = "Search";
+const String listingAppBarText = "Popular Destinations";
+const String customTextFirstTitle = "Personal Details";
+const String customTextSecondTitle = "Email ID";
+const String customTextThirdTitle = "Professional Details";
+const String specialContainerFirstTitle = "Email";
+const String specialContainerSecondTitle = "Phone Number";
+const String specialContainerThirdTitle = "Designation";
+const String textHomeFirstOneText = "Recommended";
+const String textHomeFirstTwoText = "Trending Deals";
+const String notificationViewText = "Notification View";
