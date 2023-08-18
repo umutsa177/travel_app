@@ -1,16 +1,26 @@
-# travel_app
+# Travel App
 
-A new Flutter project.
+- I used Bloc package this project
+ 
+- This project is both UI and UX project
+> Pages
+----------
+- Login Page
+ ----------
+![Screenshot_1692364151](https://github.com/umutsa177/travel_App/assets/76686224/034fba2e-7655-4744-81ec-86190881566c)
+ 
+- Home Page
+ ----------
+![Screenshot_1692364185](https://github.com/umutsa177/travel_App/assets/76686224/27a0dd6e-ca9f-4dce-a124-e35aac3f2d4c)
 
-## Getting Started
+- Listing Page
+ ----------
+![Screenshot_1692364208](https://github.com/umutsa177/travel_App/assets/76686224/4773e581-26df-405f-bd36-36b7467670ed)
 
-This project is a starting point for a Flutter application.
+- Notification Page
+ ----------
+![Screenshot_1692364218](https://github.com/umutsa177/travel_App/assets/76686224/e0c99f69-d81a-48be-9e76-c5773ce22b85)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Profile Page
+ ----------
+![Screenshot_1692364226](https://github.com/umutsa177/travel_App/assets/76686224/97605006-8e78-41f4-92ed-6323306b0db4)
