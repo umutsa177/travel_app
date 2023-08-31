@@ -13,15 +13,23 @@ class FirstLoginTextField extends StatefulWidget {
   State<FirstLoginTextField> createState() => _FirstLoginTextFieldState();
 }
 
+late final TextEditingController emailController;
+
 class _FirstLoginTextFieldState extends State<FirstLoginTextField> {
-  final TextEditingController controllerOne = TextEditingController();
   final String _hintText = "Email or Phone No.";
+
+  @override
+  void initState() {
+    emailController = TextEditingController();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       onChanged: (value) {},
-      controller: controllerOne,
+      autocorrect: true,
+      controller: emailController,
       keyboardType: TextInputType.emailAddress,
       autofillHints: const [AutofillHints.email],
       textInputAction: TextInputAction.next,

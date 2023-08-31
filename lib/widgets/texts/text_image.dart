@@ -20,7 +20,7 @@ class ImageText extends StatelessWidget {
       textAlign: TextAlign.center,
       style: GoogleFonts.qwigley(
         color: ProjectColors.richBlack.toColor(),
-        fontSize: profileAppBarIconWidth4x,
+        fontSize: dropDownYearWidth,
         fontWeight: Fontweights.regular.value(),
       ),
     );

@@ -14,18 +14,24 @@ class SecondLoginTextField extends StatefulWidget {
   State<SecondLoginTextField> createState() => _SecondLoginTextFieldState();
 }
 
-class _SecondLoginTextFieldState extends State<SecondLoginTextField> {
-  final TextEditingController controllerTwo = TextEditingController();
+late final TextEditingController passwordController;
 
+class _SecondLoginTextFieldState extends State<SecondLoginTextField> {
   final String _obscureText = '*';
   final bool _isSecure = true;
   final String _hintText = "Password";
 
   @override
+  void initState() {
+    passwordController = TextEditingController();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return TextField(
       onChanged: (value) {},
-      controller: controllerTwo,
+      controller: passwordController,
       keyboardType: TextInputType.visiblePassword,
       autofillHints: const [AutofillHints.password],
       textInputAction: TextInputAction.done,
