@@ -3,11 +3,13 @@
 - I used Bloc package this project
  
 - This project is both UI and UX project
+
+- In this project, I made the search bars functional on all pages except the login page
 > Pages
 ----------
 - Login Page
  ----------
-![Screenshot_1692364151](https://github.com/umutsa177/travel_App/assets/76686224/034fba2e-7655-4744-81ec-86190881566c)
+![WhatsApp Image 2023-08-31 at 16 43 13](https://github.com/umutsa177/travel_App/assets/76686224/d7d458b4-f26f-45ed-849e-b57f1475f39a)
  
 - Home Page
  ----------
