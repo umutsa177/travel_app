@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:travel_app/cubit/home_cubit.dart';
 import 'package:travel_app/models/holiday_destination_model.dart';
 import 'package:travel_app/utility/enums/color_enums.dart';
 import 'package:travel_app/utility/enums/fontweight_enums.dart';
 import 'package:travel_app/utility/extensions/color_extensions.dart';
 import 'package:travel_app/utility/extensions/fontweight_extensions.dart';
+import 'package:travel_app/views/home_view/cubit/home_cubit.dart';
 import 'package:travel_app/widgets/listview_builders/destination_options_listview_builder.dart';
 import 'package:travel_app/widgets/listview_builders/natural_destination_listview_builder.dart';
 import 'package:travel_app/widgets/textfields/textfield_home.dart';
 
-import '../utility/constants/double_constant.dart';
-import '../utility/constants/padding_constant.dart';
-import '../utility/constants/string_constant.dart';
-import '../widgets/containers/container_small_profile.dart';
-import '../widgets/texts/text_home_first.dart';
-import '../widgets/texts/text_home_second.dart';
+import '../../utility/constants/double_constant.dart';
+import '../../utility/constants/padding_constant.dart';
+import '../../utility/constants/string_constant.dart';
+import '../../widgets/containers/container_small_profile.dart';
+import '../../widgets/texts/text_home_first.dart';
+import '../../widgets/texts/text_home_second.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -55,10 +55,7 @@ class _HomeViewState extends State<HomeView> {
                     child: const TextFieldHome(),
                   ),
                   const Padding(
-                    padding: EdgeInsets.only(
-                        top: mediumSizedBoxHeight,
-                        bottom: minSizedBoxHeight,
-                        left: loginSignInFontSize),
+                    padding: EdgeInsets.only(top: mediumSizedBoxHeight, bottom: minSizedBoxHeight, left: loginSignInFontSize),
                     child: SizedBox(
                       height: destinationListviewHeight,
                       child: DestinationOptionsListviewBuilder(),
@@ -111,44 +108,46 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 
-  ListView _holidayItemShow(HomeStates state) {
-    return ListView.builder(
-      scrollDirection: Axis.horizontal,
-      itemCount: state is HomeItemsLoaded ? state.items.length : zero.toInt(),
-      itemBuilder: (context, index) {
-        return Container(
-          width: holidayListviewWidth,
-          height: holidayListviewHeight,
-          margin: const EdgeInsets.only(
-              right: listViewLeftPadding2x, left: topPadding),
-          padding: const EdgeInsets.only(left: listViewLeftPadding),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(mediumSizedBoxHeight),
-          ),
-          child: Stack(
-            alignment: AlignmentDirectional.bottomStart,
-            children: [
-              Image.asset(
-                HolidayDestinationModel.holidayItems[index].imagePath,
-                fit: BoxFit.fill,
-              ),
-              Positioned(
-                left: loginBottomPadding,
-                bottom: topPadding,
-                child: Text(
-                  HolidayDestinationModel.holidayItems[index].destinationName,
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.nunito(
-                    color: ProjectColors.white.toColor(),
-                    fontSize: bottomPadding,
-                    fontWeight: Fontweights.bold.value(),
-                  ),
+  _holidayItemShow(HomeStates state) {
+    return state is! HomeItemsLoaded
+        ? Container()
+        : ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: state.items.length,
+            itemBuilder: (context, index) {
+              HolidayDestinationModel holidayDestinationModel = state.items[index];
+              return Container(
+                width: holidayListviewWidth,
+                height: holidayListviewHeight,
+                margin: const EdgeInsets.only(right: listViewLeftPadding2x, left: topPadding),
+                padding: const EdgeInsets.only(left: listViewLeftPadding),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(mediumSizedBoxHeight),
                 ),
-              ),
-            ],
-          ),
-        );
-      },
-    );
+                child: Stack(
+                  alignment: AlignmentDirectional.bottomStart,
+                  children: [
+                    Image.asset(
+                      holidayDestinationModel.imagePath,
+                      fit: BoxFit.fill,
+                    ),
+                    Positioned(
+                      left: loginBottomPadding,
+                      bottom: topPadding,
+                      child: Text(
+                        holidayDestinationModel.destinationName,
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.nunito(
+                          color: ProjectColors.white.toColor(),
+                          fontSize: bottomPadding,
+                          fontWeight: Fontweights.bold.value(),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
+          );
   }
 }

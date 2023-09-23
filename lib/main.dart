@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           titleTextStyle: GoogleFonts.nunito(
             color: ProjectColors.black.toColor(),
             fontSize: titlefontSize,
-            fontWeight: Fontweights.bold.value(),
+            fontWeight: Fontweights.bold.getValue,
             letterSpacing: appBarletterSpacing,
           ),
         ),
