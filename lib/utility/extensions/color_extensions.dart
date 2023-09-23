@@ -18,3 +18,7 @@ extension ColorExtension on ProjectColors {
     };
   }
 }
+
+class CustomColors {
+  static Color colorB8B8B8 = Color(0x708B8B8B);
+}
