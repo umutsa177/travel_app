@@ -1,6 +1,6 @@
 # Travel App
 
-- I used Bloc package this project
+- I used Cubit this project
  
 - This project is both UI and UX project
 
