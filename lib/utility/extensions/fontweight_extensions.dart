@@ -12,4 +12,16 @@ extension FontWeightExtension on Fontweights {
       Fontweights.extraBold => FontWeight.w800,
     };
   }
+
+  //FontWeight get getValue => value();
+  FontWeight get getValue {
+    return switch (this) {
+      Fontweights.light => FontWeight.w300,
+      Fontweights.regular => FontWeight.w400,
+      Fontweights.medium => FontWeight.w500,
+      Fontweights.semiBold => FontWeight.w600,
+      Fontweights.bold => FontWeight.w700,
+      Fontweights.extraBold => FontWeight.w800,
+    };
+  }
 }

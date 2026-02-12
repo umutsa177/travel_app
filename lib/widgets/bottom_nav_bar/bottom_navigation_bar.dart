@@ -5,7 +5,7 @@ import 'package:travel_app/utility/enums/color_enums.dart';
 import 'package:travel_app/utility/enums/fontweight_enums.dart';
 import 'package:travel_app/utility/extensions/color_extensions.dart';
 import 'package:travel_app/utility/extensions/fontweight_extensions.dart';
-import 'package:travel_app/views/home_view.dart';
+import 'package:travel_app/views/home_view/home_view.dart';
 import 'package:travel_app/views/listing_view.dart';
 import 'package:travel_app/views/notification_view.dart';
 import 'package:travel_app/views/profile_view.dart';
@@ -14,8 +14,7 @@ class BottomNavigationBarWidget extends StatefulWidget {
   const BottomNavigationBarWidget({super.key});
 
   @override
-  State<BottomNavigationBarWidget> createState() =>
-      _BottomNavigationBarWidgetState();
+  State<BottomNavigationBarWidget> createState() => _BottomNavigationBarWidgetState();
 }
 
 List<String> views = [
